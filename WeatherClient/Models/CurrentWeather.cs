@@ -1,31 +1,27 @@
-namespace WeatherClient.Models;
+using System.Text.Json.Serialization;
 
-public class CurrentWeather
+namespace WeatherClient.Models.CurrentWeather;
+
+public class CurrentWeatherResponse
 {
-    public string City { get; set; }
-    public string Country { get; set; }
-    public string State { get; set; }
-    public string LocalTime { get; set; }
-    public string TimeZone { get; set; }
-    public string Celsius { get; set; }
-    public string Fahrenheit { get; set; }
+    [JsonPropertyName("name")]
+    public string City { get; set; } = string.Empty;
 
-    public CurrentWeather(
-        string city, 
-        string country, 
-        string state = "", 
-        string localTime, 
-        string timeZone,
-        string celsius,
-        string fahrenheit
-    )
-    {
-        City = city;
-        Country = country;
-        State = state;
-        LocalTime = localTime;
-        TimeZone = timeZone;
-        Celsius = celsius;
-        Fahrenheit = fahrenheit;
-    }
+    [JsonPropertyName("country")]
+    public string Country { get; set; } = string.Empty;
+
+    [JsonPropertyName("region")]
+    public string State { get; set; } = string.Empty;
+
+    [JsonPropertyName("localtime")]
+    public string LocalTime { get; set; } = string.Empty;
+
+    [JsonPropertyName("tz_id")]
+    public string TimeZone { get; set; } = string.Empty;
+
+    [JsonPropertyName("temp_c")]
+    public string Celsius { get; set; } = string.Empty;
+
+    [JsonPropertyName("temp_f")]
+    public string Fahrenheit { get; set; } = string.Empty;
 }
