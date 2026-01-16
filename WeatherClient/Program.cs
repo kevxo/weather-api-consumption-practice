@@ -21,11 +21,11 @@ var currentWeather = await currentWeatherService.GetCurrentWeather(location!);
 
 if (currentWeather != null)
 {
-    Console.WriteLine($"City -> ${currentWeather.City}");
-    Console.WriteLine($"Country -> ${currentWeather.Country}");
-    Console.WriteLine($"State -> ${currentWeather.State}");
-    Console.WriteLine($"Local Time -> ${currentWeather.LocalTime}");
-    Console.WriteLine($"Time Zone -> ${currentWeather.TimeZone}");
-    Console.WriteLine($"Celsius -> ${currentWeather.Celsius}");
-    Console.WriteLine($"Fahrenheit -> ${currentWeather.Fahrenheit}");
+    Console.WriteLine($"City -> {currentWeather.City}");
+    Console.WriteLine($"Country -> {currentWeather.Country}");
+    Console.WriteLine($"State -> {currentWeather.State}");
+    Console.WriteLine($"Local Time -> {currentWeather.LocalTime}");
+    Console.WriteLine($"Time Zone -> {currentWeather.TimeZone}");
+    Console.WriteLine($"Celsius -> {currentWeather.Celsius}");
+    Console.WriteLine($"Fahrenheit -> {currentWeather.Fahrenheit}");
 }
